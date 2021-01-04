@@ -95,3 +95,7 @@ returns
 ```json
 [null,{"rh":79,"pod":"d","lon":-93.1571,"pres":972.7,"timezone":"America/Chicago","ob_time":"2020-12-30 15:40","country_code":"US","clouds":100,"ts":1609342800,"solar_rad":45.1,"state_code":"MN","city_name":"Roseville","wind_spd":15,"wind_cdir_full":"west","wind_cdir":"W","slp":1009.1,"vis":3.1,"h_angle":-36,"sunset":"22:40","dni":620.71,"dewpt":18.4,"snow":0,"uv":0.9273571,"precip":0,"wind_dir":270,"sunrise":"13:50","ghi":225.75,"dhi":69.39,"aqi":54,"lat":45.0139,"weather":{"icon":"c04d","code":804,"description":"Overcast clouds"},"datetime":"2020-12-30:16","temp":24,"station":"HPN30","elev_angle":15.32,"app_temp":11.4,"postal_code":"55113"}]
 ```
+
+## Swagger UI documentation
+
+API docs using the Swagger UI are at `http://localhost:3000/api-docs`.

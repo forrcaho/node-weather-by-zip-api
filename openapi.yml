@@ -1,0 +1,37 @@
+openapi: '3.0.2'
+info:
+  title: Weather by Zip API
+  version: '1.0'
+  contact:
+    name: 'Forrest Cahoon'
+    email: 'forrest.cahoon@gmail.com'
+servers:
+  - url: http://localhost:3000/
+    description: dev server
+paths:
+  /weather:
+    get:
+      tags:
+        - Weather by Zip
+      summary: Get weather by zip code
+      parameters:
+        - name: zip
+          in: query
+          description: zip code
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+
+      responses:
+        '200':
+          description: successful response
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                  - type: array
+
+

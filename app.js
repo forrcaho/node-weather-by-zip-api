@@ -3,6 +3,14 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+
+// Set up Swagger UI
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerDocument = YAML.load('./openapi.yml');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// Set up the API
 const weatherbitClient = require('./weatherbitClient');
 const getWeatherByZipCode = weatherbitClient.getWeatherByZipCode;
 const getWeatherByMultiZipCodes = weatherbitClient.getWeatherByMultiZipCodes;
